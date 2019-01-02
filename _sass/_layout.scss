@@ -25,7 +25,6 @@ color: $theme-color;
     }
 }
 .site-nav {
-float: right;
 line-height: $nav-height;
 .page-link{
 line-height: $base-line-height;
@@ -54,6 +53,11 @@ display: line;
     float:left;
     font-weight: bold;
 }
+
+.links {
+    float:right;
+}
+
 
 .header-bar{
     left: 0px;
