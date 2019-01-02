@@ -72,18 +72,6 @@ So, here are the values of the Euclidian Distance:
                  ╚══════╩════════╩════════╩════════╝
 {% endhighlight %}
 
-S1
-S2
-S3
-
-
-S1
-
-
-S2
-
-
-S2
 
 It looks good, but still there’s some drawbacks. Many times, the text semantics are determined by the number of appearances of some word. For example, if we read an article about “Vectors,” then the term “Vector” will appear many times. In that case, using just binary values in our text vectors will omit the true semantics of the text. The simplest solution is just to store the number of appearances of the word in the right position in the vector.
 Consider these sentences:
