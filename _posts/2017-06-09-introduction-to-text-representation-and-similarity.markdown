@@ -106,8 +106,9 @@ The most typical solution to this problem is, instead of computing the distance 
 You can see that the angle of Sentence 1 and 2 is closer than 1 and 3 or 2 and 3. The actual similarity metric is called “Cosine Similarity”, which is the cosine of the angle between 2 vectors. The cosine of zero is 1 (most similar), and the cosine of 180 is zero (least similar).
 Cosine Similarity
 This way, we are able to represent the semantics of texts better, as well as compare text objects.
-<h2>
+<h3>
 Conclusion
-</h2>
+</h3>
+
 We saw the different ways to represent text and to compare text objects. There is no better or best way, there are many types of problems and challenges in text machine learning and data mining related task, and we should understand and pick the right option for us.
 There are many other representations and distance/similarity function, including TfIdf and Word2Vec as very common text representations (of which I hope I’ll write another post).
