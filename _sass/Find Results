@@ -1,0 +1,47 @@
+Searching 53 files for "page-link" (regex)
+
+/Users/dima/Projects/shudima.github.io/_includes/header.html:
+    6        <div class="trigger">
+    7          <!-- {{ site.title }} instead of blog -->
+    8:         <a class="page-link" href="{{ site.baseurl }}/">Dima Shulga</a>
+    9:         <a class="page-link" href="{{ site.baseurl }}/">blog</a>
+   10  
+   11          {% for page in site.pages %}
+   12            {% if page.title %}
+   13:           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+   14            {% endif %}
+   15          {% endfor %}
+
+/Users/dima/Projects/shudima.github.io/_sass/_layout.scss:
+   28  float: right;
+   29  line-height: $nav-height;
+   30: .page-link{
+   31  line-height: $base-line-height;
+   32          // Gaps between nav items, but not on the first one
+   ..
+   44  padding-bottom: 5px;
+   45          }
+   46: .page-link {
+   47  display: line;
+   48          }
+
+5 matches across 2 files
+
+
+Searching 53 files for "trigger" (regex)
+
+/Users/dima/Projects/shudima.github.io/_includes/header.html:
+    7          <a class="page-link" href="{{ site.baseurl }}/">Dima Shulga</a>
+    8        </div>
+    9:       <div class="trigger">
+   10          <!-- {{ site.title }} instead of blog -->
+   11          
+
+/Users/dima/Projects/shudima.github.io/_sass/_layout.scss:
+   40  right: 10px;
+   41  text-align: right;
+   42: &:hover .trigger {
+   43  display: block;
+   44  padding-bottom: 5px;
+
+2 matches across 2 files
