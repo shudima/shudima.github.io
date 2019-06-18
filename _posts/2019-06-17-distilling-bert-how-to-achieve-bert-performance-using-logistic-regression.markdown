@@ -1,3 +1,9 @@
+---
+layout: post
+title: Distilling BERT — How to achieve BERT performance using Logistic Regression
+date: 2019-06-17
+description: How to achieve BERT performance using logistic regression and some unlabelled data ...
+---
 # Distilling BERT — How to achieve BERT performance using Logistic Regression
 
 BERT is awesome, and it’s everywhere. It looks like any NLP task can benefit from utilizing BERT. The authors [showed](https://arxiv.org/abs/1810.04805) that this is indeed the case, and from my experience, it works like magic. It’s easy to use, works on a small amount of data and supports many different languages. It seems like there’s no single reason not to use it everywhere. But actually, there is. Unfortunately, in practice, it is not so trivial. BERT is a huge model, more than 100 million parameters. Not only we need a GPU to fine tune it, but also in inference time, a CPU (or even many of them) is not enough. It means that if we really want to use BERT everywhere, we need to install a GPU everywhere. This is impractical in most cases. In 2015, this [paper](https://arxiv.org/abs/1503.02531) (by Hinton et al.,) introduced a way to distill the knowledge of a very big neural network into a much smaller one, like teacher and student. The method is very simple. We use the big neural network predictions to train the small one. The main idea is to use **raw** predictions, i.e, predictions before the final activation function (usually softmax or sigmoid). The assumption is that by using raw values, the model is able to learn inner representations better than by using “hard” predictions. Sotmax normalizes the values to 1 while keeping the maximum value high and decreases other values to something very close to zero. There’s little information in zeros, so by using raw predictions, we also learn from the not-predicted classes. The authors show good results in several tasks including MNIST and speech recognition.
